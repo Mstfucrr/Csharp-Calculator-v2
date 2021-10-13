@@ -36,7 +36,7 @@ namespace WindowsFormsApp2
             return data;
         }
 
-        float result,number1 = 0, Res = 0;
+        float result, number1 = 0, Res = 0;
         string isaret = "";
         bool equ = false;
 
@@ -44,7 +44,7 @@ namespace WindowsFormsApp2
 
         private void Tiklanan_Harf(object sender, EventArgs e)
         {
-            
+
             Label TiklananLabel = sender as Label;
             if (textBox1.Text == "0" || equ)
                 textBox1.Clear();
@@ -72,6 +72,8 @@ namespace WindowsFormsApp2
                 equ = false;
                 number1 = 0;
                 Res = 0;
+                der_res = 0;
+                derece = 0;
 
             }
             else
@@ -96,8 +98,8 @@ namespace WindowsFormsApp2
         {
             textBox1.Text = Math.Sqrt(Texbox1_pull_data()).ToString();
             equ = true;
-
         }
+        double der_res, derece;
 
         private void dort_islem(object sender, EventArgs e)
         {
@@ -140,6 +142,24 @@ namespace WindowsFormsApp2
                 textBox1.Text = number1.ToString();
             }
 
+        }
+
+        private void Trigonometri_btns(object sender, EventArgs e)
+        {
+            Label TiklananTrigonoIslem = sender as Label;
+            derece = Convert.ToDouble(Texbox1_pull_data()) * Math.PI / 180;
+            
+            if (TiklananTrigonoIslem.Text == "sin(x°)")
+                der_res = Math.Sin(derece);
+            else if (TiklananTrigonoIslem.Text == "cos(x°)")
+                der_res = Math.Cos(derece);
+            else if (TiklananTrigonoIslem.Text == "tan(x°)")
+                der_res = Math.Tan(derece);
+            else if (TiklananTrigonoIslem.Text == "cot(x°)")
+                der_res = 1 / Math.Tan(derece);
+
+            textBox1.Text = der_res.ToString();
+            equ = true;
         }
 
         private void equal_Click(object sender, EventArgs e)
