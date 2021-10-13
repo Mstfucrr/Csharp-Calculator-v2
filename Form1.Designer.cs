@@ -64,6 +64,9 @@ namespace WindowsFormsApp2
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DarkBlue;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.button1.FlatAppearance.BorderSize = 3;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
@@ -125,6 +128,8 @@ namespace WindowsFormsApp2
             this.label6.Text = "6";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label6.Click += new System.EventHandler(this.Tiklanan_Harf);
+            this.label6.MouseEnter += new System.EventHandler(this.labels_MouseEnter);
+            this.label6.MouseLeave += new System.EventHandler(this.labels_MouseLeave);
             // 
             // label1
             // 
@@ -139,6 +144,8 @@ namespace WindowsFormsApp2
             this.label1.Text = "7";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.Tiklanan_Harf);
+            this.label1.MouseEnter += new System.EventHandler(this.labels_MouseEnter);
+            this.label1.MouseLeave += new System.EventHandler(this.labels_MouseLeave);
             // 
             // label2
             // 
@@ -153,6 +160,8 @@ namespace WindowsFormsApp2
             this.label2.Text = "8";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.Tiklanan_Harf);
+            this.label2.MouseEnter += new System.EventHandler(this.labels_MouseEnter);
+            this.label2.MouseLeave += new System.EventHandler(this.labels_MouseLeave);
             // 
             // label3
             // 
@@ -167,6 +176,8 @@ namespace WindowsFormsApp2
             this.label3.Text = "9";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label3.Click += new System.EventHandler(this.Tiklanan_Harf);
+            this.label3.MouseEnter += new System.EventHandler(this.labels_MouseEnter);
+            this.label3.MouseLeave += new System.EventHandler(this.labels_MouseLeave);
             // 
             // label4
             // 
@@ -181,6 +192,8 @@ namespace WindowsFormsApp2
             this.label4.Text = "4";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.Click += new System.EventHandler(this.Tiklanan_Harf);
+            this.label4.MouseEnter += new System.EventHandler(this.labels_MouseEnter);
+            this.label4.MouseLeave += new System.EventHandler(this.labels_MouseLeave);
             // 
             // label5
             // 
@@ -195,6 +208,8 @@ namespace WindowsFormsApp2
             this.label5.Text = "5";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label5.Click += new System.EventHandler(this.Tiklanan_Harf);
+            this.label5.MouseEnter += new System.EventHandler(this.labels_MouseEnter);
+            this.label5.MouseLeave += new System.EventHandler(this.labels_MouseLeave);
             // 
             // label7
             // 
@@ -209,6 +224,8 @@ namespace WindowsFormsApp2
             this.label7.Text = "1";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label7.Click += new System.EventHandler(this.Tiklanan_Harf);
+            this.label7.MouseEnter += new System.EventHandler(this.labels_MouseEnter);
+            this.label7.MouseLeave += new System.EventHandler(this.labels_MouseLeave);
             // 
             // label8
             // 
@@ -223,6 +240,8 @@ namespace WindowsFormsApp2
             this.label8.Text = "2";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label8.Click += new System.EventHandler(this.Tiklanan_Harf);
+            this.label8.MouseEnter += new System.EventHandler(this.labels_MouseEnter);
+            this.label8.MouseLeave += new System.EventHandler(this.labels_MouseLeave);
             // 
             // label9
             // 
@@ -237,6 +256,8 @@ namespace WindowsFormsApp2
             this.label9.Text = "3";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label9.Click += new System.EventHandler(this.Tiklanan_Harf);
+            this.label9.MouseEnter += new System.EventHandler(this.labels_MouseEnter);
+            this.label9.MouseLeave += new System.EventHandler(this.labels_MouseLeave);
             // 
             // label11
             // 
@@ -251,6 +272,8 @@ namespace WindowsFormsApp2
             this.label11.Text = "0";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label11.Click += new System.EventHandler(this.Tiklanan_Harf);
+            this.label11.MouseEnter += new System.EventHandler(this.labels_MouseEnter);
+            this.label11.MouseLeave += new System.EventHandler(this.labels_MouseLeave);
             // 
             // label12
             // 
@@ -265,6 +288,8 @@ namespace WindowsFormsApp2
             this.label12.Text = "1/x";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label12.Click += new System.EventHandler(this.onedivxbtn_Click);
+            this.label12.MouseEnter += new System.EventHandler(this.Islem_MouseEnter);
+            this.label12.MouseLeave += new System.EventHandler(this.Islem_MouseLeave);
             // 
             // label16
             // 
@@ -279,6 +304,8 @@ namespace WindowsFormsApp2
             this.label16.Text = "x²";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label16.Click += new System.EventHandler(this.pow2_Click);
+            this.label16.MouseEnter += new System.EventHandler(this.Islem_MouseEnter);
+            this.label16.MouseLeave += new System.EventHandler(this.Islem_MouseLeave);
             // 
             // label17
             // 
@@ -293,6 +320,8 @@ namespace WindowsFormsApp2
             this.label17.Text = "√x";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label17.Click += new System.EventHandler(this.Sqrt_Click);
+            this.label17.MouseEnter += new System.EventHandler(this.Islem_MouseEnter);
+            this.label17.MouseLeave += new System.EventHandler(this.Islem_MouseLeave);
             // 
             // label14
             // 
@@ -307,6 +336,8 @@ namespace WindowsFormsApp2
             this.label14.Text = "<=";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label14.Click += new System.EventHandler(this.backSpace_Click);
+            this.label14.MouseEnter += new System.EventHandler(this.Islem_MouseEnter);
+            this.label14.MouseLeave += new System.EventHandler(this.Islem_MouseLeave);
             // 
             // label18
             // 
@@ -321,6 +352,8 @@ namespace WindowsFormsApp2
             this.label18.Text = "÷";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label18.Click += new System.EventHandler(this.dort_islem);
+            this.label18.MouseEnter += new System.EventHandler(this.Islem_MouseEnter);
+            this.label18.MouseLeave += new System.EventHandler(this.Islem_MouseLeave);
             // 
             // label19
             // 
@@ -335,6 +368,8 @@ namespace WindowsFormsApp2
             this.label19.Text = "x";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label19.Click += new System.EventHandler(this.dort_islem);
+            this.label19.MouseEnter += new System.EventHandler(this.Islem_MouseEnter);
+            this.label19.MouseLeave += new System.EventHandler(this.Islem_MouseLeave);
             // 
             // label20
             // 
@@ -349,6 +384,8 @@ namespace WindowsFormsApp2
             this.label20.Text = "+";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label20.Click += new System.EventHandler(this.dort_islem);
+            this.label20.MouseEnter += new System.EventHandler(this.Islem_MouseEnter);
+            this.label20.MouseLeave += new System.EventHandler(this.Islem_MouseLeave);
             // 
             // label21
             // 
@@ -377,6 +414,8 @@ namespace WindowsFormsApp2
             this.label22.Text = "-";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label22.Click += new System.EventHandler(this.dort_islem);
+            this.label22.MouseEnter += new System.EventHandler(this.Islem_MouseEnter);
+            this.label22.MouseLeave += new System.EventHandler(this.Islem_MouseLeave);
             // 
             // tableLayoutPanel1
             // 
@@ -493,6 +532,8 @@ namespace WindowsFormsApp2
             this.label10.Text = ",";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label10.Click += new System.EventHandler(this.Tiklanan_Harf);
+            this.label10.MouseEnter += new System.EventHandler(this.labels_MouseEnter);
+            this.label10.MouseLeave += new System.EventHandler(this.labels_MouseLeave);
             // 
             // Form1
             // 
@@ -507,7 +548,7 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.tableLayoutPanel1);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Hesap Makinesi";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Click += new System.EventHandler(this.Trigonometri_btns);
             this.tableLayoutPanel1.ResumeLayout(false);

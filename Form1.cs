@@ -15,13 +15,20 @@ namespace WindowsFormsApp2
         public Form1()
         {
             InitializeComponent();
+
+
+
         }
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
+
 
         }
 
+        
         private float Texbox1_pull_data()
         {
             float data;
@@ -62,7 +69,9 @@ namespace WindowsFormsApp2
 
         private void Clear_Click(object sender, EventArgs e)
         {
+
             Button clear_click = sender as Button;
+
             if (clear_click.Text == "C")
             {
                 textBox1.Text = "0";
@@ -74,11 +83,10 @@ namespace WindowsFormsApp2
                 Res = 0;
                 der_res = 0;
                 derece = 0;
-
             }
             else
                 textBox1.Text = "0";
-
+            
         }
 
         private void onedivxbtn_Click(object sender, EventArgs e)
@@ -100,6 +108,31 @@ namespace WindowsFormsApp2
             equ = true;
         }
         double der_res, derece;
+
+        
+        private void labels_MouseEnter(object sender, EventArgs e)
+        {
+            Label enterLabel = sender as Label;
+            enterLabel.BackColor = Color.DarkCyan;
+        }
+
+        private void labels_MouseLeave(object sender, EventArgs e)
+        {
+            Label enterLabel = sender as Label;
+            enterLabel.BackColor = Color.MediumBlue;
+        }
+
+        private void Islem_MouseEnter(object sender, EventArgs e)
+        {
+            Label enterIslemLabel = sender as Label;
+            enterIslemLabel.BackColor = Color.Teal;
+        }
+
+        private void Islem_MouseLeave(object sender, EventArgs e)
+        {
+            Label enterIslemLabel = sender as Label;
+            enterIslemLabel.BackColor = Color.DarkBlue;
+        }
 
         private void dort_islem(object sender, EventArgs e)
         {
@@ -148,15 +181,19 @@ namespace WindowsFormsApp2
         {
             Label TiklananTrigonoIslem = sender as Label;
             derece = Convert.ToDouble(Texbox1_pull_data()) * Math.PI / 180;
+
+            if (TiklananTrigonoIslem != null)
+            {
+                if (TiklananTrigonoIslem.Text == "sin(x°)")
+                    der_res = Math.Sin(derece);
+                else if (TiklananTrigonoIslem.Text == "cos(x°)")
+                    der_res = Math.Cos(derece);
+                else if (TiklananTrigonoIslem.Text == "tan(x°)")
+                    der_res = Math.Tan(derece);
+                else if (TiklananTrigonoIslem.Text == "cot(x°)")
+                    der_res = 1 / Math.Tan(derece);
             
-            if (TiklananTrigonoIslem.Text == "sin(x°)")
-                der_res = Math.Sin(derece);
-            else if (TiklananTrigonoIslem.Text == "cos(x°)")
-                der_res = Math.Cos(derece);
-            else if (TiklananTrigonoIslem.Text == "tan(x°)")
-                der_res = Math.Tan(derece);
-            else if (TiklananTrigonoIslem.Text == "cot(x°)")
-                der_res = 1 / Math.Tan(derece);
+            }
 
             textBox1.Text = der_res.ToString();
             equ = true;
